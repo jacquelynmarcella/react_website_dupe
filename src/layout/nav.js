@@ -4,7 +4,13 @@ class Navbar extends Component {
   render() {
     return (
       <div>
-        Navbar
+        <nav>
+          <a href="#" className="logo">Logo</a>
+          <a href="#">Become a host</a>
+          <a href="#">Help</a>
+          <a href="#">Sign Up</a>
+          <a href="#">Login</a>
+        </nav>
       </div>
     );
   }

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
+import FA from 'react-fontawesome';
 
 //Layout sections
 import Navbar from './layout/nav.js'
