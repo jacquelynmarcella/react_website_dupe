@@ -18,11 +18,38 @@ import ExperiencesData from './data/experiences-data.js'
 import HomeData from './data/home-data.js'
 
 class App extends Component {
+    constructor(props){
+    super(props);
+    this.state = {
+      searchContent: '',
+      searching: false
+    }
+  }
+  handleChange = (event) => {
+    this.setState({ 
+      searchContent: event.target.value
+    });
+    console.log(this.state);
+  }
+  handleFormSubmit = (event) => {
+    event.preventDefault();
+    if(this.state.searchContent.length > 0){
+      this.setState({
+        searching: true
+      })
+      console.log(this.state);
+    } else {
+      this.setState({
+        searching: false
+      })
+    }
+  }
+
   render() {
     return (
       <div className="App">
         <Navbar />
-        <Header />
+        <Header handleChange={this.handleChange} handleFormSubmit={this.handleFormSubmit} />
         <Explore />
         <Experiences data={ExperiencesData} />
         <Homes data={HomeData} />

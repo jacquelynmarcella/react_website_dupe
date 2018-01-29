@@ -5,7 +5,9 @@ class Offering extends Component {
 	render(){
 		return(
 			<div className="offering">
-				{this.props.data.image} <br />
+				<div className="offeringImg">
+					<img src={this.props.data.image} />
+				</div>
 				<span className="subhead">{this.props.data.subhead}</span><br />
 				<span className="title">{this.props.data.title}</span><br />
 				<span className="cost">{this.props.data.cost}</span><br />
