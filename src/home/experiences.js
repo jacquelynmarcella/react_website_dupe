@@ -8,7 +8,7 @@ class Experiences extends Component {
   	})
     return (
       <div className="section">
-        <h3>Experiences</h3>
+        <h3>Experiences {this.props.searchContent}</h3>
         {allExperiences}
       </div>
     );

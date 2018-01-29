@@ -79,6 +79,10 @@ hr {
   padding: 10px 50px;
 }
 
+form {
+  display: inline;
+}
+
 .searchbar {
   border-radius: 4px;
   border: 1px solid #DBDBDB;
@@ -199,7 +203,10 @@ input:focus {
   height: 80px;
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+
+/* Mobile view */
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+  header {
+    padding: 20px;
+  }
 }

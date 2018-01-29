@@ -8,7 +8,7 @@ class Homes extends Component {
   	})
     return (
       <div className="section">
-        <h3>Homes</h3>
+        <h3>Homes {this.props.searchContent}</h3>
         {allHomes}
       </div>
     );

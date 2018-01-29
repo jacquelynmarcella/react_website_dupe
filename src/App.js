@@ -22,7 +22,8 @@ class App extends Component {
     super(props);
     this.state = {
       searchContent: '',
-      searching: false
+      searching: false,
+      searchText: ''
     }
   }
   handleChange = (event) => {
@@ -35,28 +36,30 @@ class App extends Component {
     event.preventDefault();
     if(this.state.searchContent.length > 0){
       this.setState({
-        searching: true
+        searching: true,
+        searchText: 'in ' + this.state.searchContent
       })
       console.log(this.state);
     } else {
       this.setState({
-        searching: false
+        searching: false,
+        searchText: ''
       })
     }
   }
 
   render() {
-    return (
-      <div className="App">
-        <Navbar />
-        <Header handleChange={this.handleChange} handleFormSubmit={this.handleFormSubmit} />
-        <Explore />
-        <Experiences data={ExperiencesData} />
-        <Homes data={HomeData} />
-        <hr />
-        <Footer />
-      </div>
-    );
+      return (
+        <div className="App">
+          <Navbar />
+          <Header handleChange={this.handleChange} handleFormSubmit={this.handleFormSubmit} searchContent={this.state.searchContent} />
+          <Explore searching={this.state.searching} />
+          <Experiences data={ExperiencesData} searchContent={this.state.searchText} />
+          <Homes data={HomeData} searchContent={this.state.searchText} />
+          <hr />
+          <Footer />
+        </div>
+      );
   }
 }
 
