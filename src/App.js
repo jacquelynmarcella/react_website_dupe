@@ -10,9 +10,12 @@ import Footer from './layout/footer.js'
 import Header from './home/header.js'
 import Explore from './home/explore.js'
 import Experiences from './home/experiences.js'
+import Homes from './home/homes.js'
+import Offering from './home/offering.js'
 
 //Data
 import ExperiencesData from './data/experiences-data.js'
+import HomeData from './data/home-data.js'
 
 class App extends Component {
   render() {
@@ -22,6 +25,8 @@ class App extends Component {
         <Header />
         <Explore />
         <Experiences data={ExperiencesData} />
+        <Homes data={HomeData} />
+        <hr />
         <Footer />
       </div>
     );
