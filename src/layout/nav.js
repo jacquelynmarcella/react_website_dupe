@@ -5,7 +5,7 @@ class Navbar extends Component {
     return (
       <div>
         <nav>
-          <a href="#" className="logo">Logo</a>
+          <a href="#" className="logo"><img src="./airbnb-logo.png" /></a>
           <a href="#">Become a host</a>
           <a href="#">Help</a>
           <a href="#">Sign Up</a>

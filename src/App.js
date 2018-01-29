@@ -11,6 +11,9 @@ import Header from './home/header.js'
 import Explore from './home/explore.js'
 import Experiences from './home/experiences.js'
 
+//Data
+import ExperiencesData from './data/experiences-data.js'
+
 class App extends Component {
   render() {
     return (
@@ -18,7 +21,7 @@ class App extends Component {
         <Navbar />
         <Header />
         <Explore />
-        <Experiences />
+        <Experiences data={ExperiencesData} />
         <Footer />
       </div>
     );
